@@ -1,97 +1,72 @@
-# icu-sepsis-mortality-analysis
-Healthcare data analysis project on ICU sepsis mortality
-
 # ICU Sepsis Mortality Analysis
 
 ## Project Overview
 
-This project analyzes ICU sepsis patient data to identify factors associated with patient mortality. The dataset includes demographic variables, vital signs, laboratory results, comorbidities, and ICU admission pathways.
+This project explores factors associated with mortality among Intensive Care Unit (ICU) patients diagnosed with sepsis. Using Python and exploratory data analysis (EDA), I analyzed patient demographics, admission characteristics, comorbidity burden, and clinical variables to identify patterns that may influence patient outcomes.
 
-The objective is to clean and preprocess real-world clinical data, engineer relevant health indicators, and perform exploratory analysis to understand key drivers of ICU mortality.
+As a Registered Nurse with extensive critical care experience, I was particularly interested in applying healthcare analytics techniques to a clinically relevant problem and demonstrating how data can be used to support quality improvement and decision-making.
 
----
+## Objectives
 
-## Dataset
+The primary objectives of this analysis were to:
 
-- Source: ICU sepsis clinical dataset (Kaggle)
-- Number of records: ~2,800 patients
-- Target variable: Mortality (0 = survived, 1 = deceased)
-- Data includes:
-  - Demographics (age, gender)
-  - Clinical measurements (vitals, lab results)
-  - Comorbidities
-  - ICU admission characteristics
-
----
-
-## Data Cleaning and Preprocessing
-
-The following steps were performed to prepare the dataset:
-
-- Handled missing values in laboratory and clinical variables
-- Standardized categorical encodings (gender, admission type)
-- Removed invalid mortality encoding (value = 3)
-- Converted binary variables to consistent 0/1 format
-- Ensured consistent data types across features
-
----
-
-## Feature Engineering
-
-The following features were created to support analysis:
-
-- Comorbidity score (sum of chronic disease indicators)
-- Missing value indicators for key laboratory tests
-- Admission pathway categorization (Emergency vs Non-Emergency ICU)
-
----
-
-## Exploratory Data Analysis
-
-Key analyses performed include:
-
-- Mortality rate calculation across patient subgroups
-- Comparison of mortality by gender
-- Comparison of mortality by ICU admission type
-- Relationship between comorbidity burden and mortality
-- Distribution analysis of key clinical variables
-
----
-
-## Key Findings
-
-- Overall ICU mortality rate was approximately 47.5%
-- Older patients showed higher mortality rates
-- Gender showed minimal difference in mortality outcomes
-- Non-emergency ICU admissions were associated with higher mortality compared to emergency admissions
-- Comorbidity score showed a non-linear relationship with mortality
-
----
+* Determine the overall mortality rate among ICU patients with sepsis.
+* Explore differences in mortality across demographic groups.
+* Evaluate the impact of comorbidity burden on patient outcomes.
+* Compare mortality rates by admission type.
+* Identify variables that may warrant further investigation in predictive modeling.
 
 ## Tools and Technologies
 
-- Python
-- Pandas
-- NumPy
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Jupyter Notebook
 
----
+## Key Findings
 
-## Repository Structure
-icu-sepsis-mortality-analysis/
-│
-├── notebooks/
-│ ├── 01_data_cleaning.ipynb
-│ ├── 02_eda_analysis.ipynb
-│
-├── data/
-├── images/
-└── README.md
+* Mortality rates varied across patient demographics and admission characteristics.
+* Patients with greater comorbidity burden demonstrated increased clinical complexity.
+* Admission type appeared to be associated with differences in mortality outcomes.
+* Exploratory analysis identified several variables that may be useful in future predictive modeling efforts.
 
+## Dataset
 
----
+This project utilizes a publicly available ICU sepsis dataset from Kaggle:
+
+**Shereef, S. (n.d.).** *MIMIC-IV Style ICU Dataset for Sepsis Prediction.* Kaggle.
+
+Dataset:
+https://www.kaggle.com/datasets/sinanshereef/mimic-iv-style-icu-dataset-for-sepsis-prediction
+
+## Acknowledgment
+
+Portions of the analytical approach and exploratory workflow were informed by the publicly available Kaggle notebook:
+
+**Chowdhury, N. (n.d.).** *Mortality Detection of ICU Admitted Sepsis Patients.* Kaggle.
+
+https://www.kaggle.com/code/nabanichowdhury/mortality-detection-of-icu-admitted-sepsis
+
+## Privacy and Ethical Considerations
+
+The dataset used in this project was obtained from a publicly available source and contains de-identified information. No protected health information (PHI) was accessed, used, or disclosed during this analysis. Findings are presented for educational and portfolio purposes only and should not be interpreted as clinical recommendations.
 
 ## Future Work
 
-- Build predictive models for ICU mortality risk
-- Perform feature importance analysis
-- Develop dashboard for clinical visualization (Power BI or Tableau)
+Future analyses may include:
+
+* Logistic regression modeling
+* Machine learning classification models
+* Feature importance analysis
+* Risk stratification tools
+* Healthcare operations and quality improvement dashboards
+
+## Author
+
+**Vanessa Lowry, RN, PhD**
+
+Registered Nurse with 17+ years of experience in critical care, perioperative services, and healthcare leadership. PhD-trained physicist with interests in Healthcare Analytics, Clinical Informatics, Process Improvement, and Data-Driven Decision Making.
+
+GitHub: https://github.com/vanessadata77
+
